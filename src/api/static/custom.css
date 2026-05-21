@@ -1,0 +1,25 @@
+/* Replace the Swagger UI topbar logo dynamically with cross-browser compatible pseudo-element styling */
+.swagger-ui .topbar .topbar-wrapper .link img {
+    display: none !important;
+}
+
+.swagger-ui .topbar .topbar-wrapper .link::after {
+    content: "";
+    display: inline-block;
+    width: 240px;
+    height: 80px;
+    background: url('/static/logo.png') no-repeat center left;
+    background-size: contain;
+    border-radius: 4px;
+    vertical-align: middle;
+}
+
+/* Base customisation to look a bit cleaner */
+.swagger-ui .topbar {
+    background-color: #0f1115;
+    border-bottom: 1px solid #2a2e37;
+}
+
+.swagger-ui .info .title {
+    color: #1a1d24;
+}
